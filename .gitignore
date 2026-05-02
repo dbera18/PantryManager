@@ -1,0 +1,6 @@
+# Standard Visual Studio .gitignore essentials
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
