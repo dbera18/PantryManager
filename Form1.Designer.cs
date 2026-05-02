@@ -31,12 +31,12 @@
             label1 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            txtName = new TextBox();
+            txtQuantity = new TextBox();
+            dtpExpiry = new DateTimePicker();
+            btnAdd = new Button();
+            btnUse = new Button();
+            btnExit = new Button();
             dgvInventory = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
             SuspendLayout();
@@ -70,58 +70,61 @@
             label4.Text = "Expiration Date";
             label4.Click += label4_Click;
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.AccessibleName = "txtName";
-            textBox1.Location = new Point(229, 57);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 7;
+            txtName.AccessibleName = "txtName";
+            txtName.Location = new Point(229, 57);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(150, 31);
+            txtName.TabIndex = 7;
             // 
-            // textBox2
+            // txtQuantity
             // 
-            textBox2.AccessibleName = "txtQuantity";
-            textBox2.Location = new Point(229, 132);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(150, 31);
-            textBox2.TabIndex = 8;
+            txtQuantity.AccessibleName = "txtQuantity";
+            txtQuantity.Location = new Point(229, 132);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(150, 31);
+            txtQuantity.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // dtpExpiry
             // 
-            dateTimePicker1.Location = new Point(229, 193);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 31);
-            dateTimePicker1.TabIndex = 9;
+            dtpExpiry.Location = new Point(229, 193);
+            dtpExpiry.Name = "dtpExpiry";
+            dtpExpiry.Size = new Size(300, 31);
+            dtpExpiry.TabIndex = 9;
             // 
-            // button1
+            // btnAdd
             // 
-            button1.AccessibleName = "btnAdd";
-            button1.Location = new Point(92, 250);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 10;
-            button1.Text = "Add Item";
-            button1.UseVisualStyleBackColor = true;
+            btnAdd.AccessibleName = "btnAdd";
+            btnAdd.Location = new Point(92, 250);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(112, 34);
+            btnAdd.TabIndex = 10;
+            btnAdd.Text = "Add Item";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += button1_Click;
             // 
-            // button2
+            // btnUse
             // 
-            button2.AccessibleName = "btnUse";
-            button2.Location = new Point(247, 250);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 11;
-            button2.Text = "Use Item";
-            button2.UseVisualStyleBackColor = true;
+            btnUse.AccessibleName = "btnUse";
+            btnUse.Location = new Point(247, 250);
+            btnUse.Name = "btnUse";
+            btnUse.Size = new Size(112, 34);
+            btnUse.TabIndex = 11;
+            btnUse.Text = "Use Item";
+            btnUse.UseVisualStyleBackColor = true;
+            btnUse.Click += button2_Click;
             // 
-            // button3
+            // btnExit
             // 
-            button3.AccessibleName = "btnExit";
-            button3.Location = new Point(426, 250);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 34);
-            button3.TabIndex = 12;
-            button3.Text = "Exit";
-            button3.UseVisualStyleBackColor = true;
+            btnExit.AccessibleName = "btnExit";
+            btnExit.Location = new Point(426, 250);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(112, 34);
+            btnExit.TabIndex = 12;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // dgvInventory
             // 
@@ -140,12 +143,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 482);
             Controls.Add(dgvInventory);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnExit);
+            Controls.Add(btnUse);
+            Controls.Add(btnAdd);
+            Controls.Add(dtpExpiry);
+            Controls.Add(txtQuantity);
+            Controls.Add(txtName);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label1);
@@ -161,12 +164,12 @@
         private Label label1;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private DateTimePicker dateTimePicker1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private TextBox txtName;
+        private TextBox txtQuantity;
+        private DateTimePicker dtpExpiry;
+        private Button btnAdd;
+        private Button btnUse;
+        private Button btnExit;
         private DataGridView dgvInventory;
     }
 }
